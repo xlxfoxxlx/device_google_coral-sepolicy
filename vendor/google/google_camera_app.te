@@ -37,10 +37,6 @@ allow google_camera_app mediadrmserver_service:service_manager find;
 allow google_camera_app radio_service:service_manager find;
 allow google_camera_app app_api_service:service_manager find;
 allow google_camera_app vr_manager_service:service_manager find;
-allow google_camera_app gpu_service:service_manager find;
-
-# Allow untrusted apps to interact with gpuservice
-binder_call(google_camera_app, gpuservice)
 
 # Allow GMS core to access perfprofd output, which is stored
 # in /data/misc/perfprofd/. GMS core will need to list all

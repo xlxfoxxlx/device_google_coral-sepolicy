@@ -1,3 +1,5 @@
 allow untrusted_app configfs:dir r_dir_perms;
 allow untrusted_app debugfs:dir r_dir_perms;
 allow untrusted_app device:dir r_dir_perms;
+allow untrusted_app proc_asound:dir search;
+allow untrusted_app proc_irq:dir search;

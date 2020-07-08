@@ -1,0 +1,3 @@
+allow vendor_pd_mapper sysfs_esoc:dir { open read search };
+allow vendor_pd_mapper sysfs_msm_subsys:dir { open read search };
+allow vendor_pd_mapper sysfs_ssr:file read;

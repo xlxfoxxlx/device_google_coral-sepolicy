@@ -71,3 +71,4 @@ hal_client_domain(hal_face_default, hal_thermal)
 allow hal_face_default citadeld_service:service_manager find;
 binder_call(hal_face_default, citadeld)
 
+allow hal_face_default vendor_display_prop:file { open map read getattr };

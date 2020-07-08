@@ -27,6 +27,7 @@ allow thermal-engine self:socket create_socket_perms;
 allowxperm thermal-engine self:socket ioctl msm_sock_ipc_ioctls;
 
 allow thermal-engine socket_device:dir w_dir_perms;
+allow thermal-engine socket_device:sock_file { create unlink setattr };
 allow thermal-engine sysfs:dir r_dir_perms;
 allow thermal-engine sysfs_batteryinfo:dir r_dir_perms;
 allow thermal-engine sysfs_esoc:dir r_dir_perms;
@@ -34,6 +35,8 @@ allow thermal-engine sysfs_faceauth:dir r_dir_perms;
 allow thermal-engine sysfs_leds:dir r_dir_perms;
 allow thermal-engine sysfs_soc:dir r_dir_perms;
 allow thermal-engine sysfs_ssr:file r_file_perms;
+allow thermal-engine sysfs_faceauth:file { open read };
+allow thermal-engine sysfs_soc:file { open getattr read };
 
 # reboot/shutdown for thermal limits exceeded
 set_prop(thermal-engine, powerctl_prop)

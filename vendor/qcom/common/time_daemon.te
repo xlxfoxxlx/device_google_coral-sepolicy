@@ -24,3 +24,7 @@ allow time_daemon sysfs_soc:file r_file_perms;
 
 allow time_daemon sysfs_esoc:dir r_dir_perms;
 allow time_daemon sysfs_msm_subsys:dir r_dir_perms;
+
+allow time_daemon sysfs_faceauth:dir search;
+allow time_daemon sysfs_faceauth:file { open read };
+allow time_daemon sysfs_ssr:file { open read };
